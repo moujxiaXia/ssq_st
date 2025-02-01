@@ -1,0 +1,11 @@
+version: '3'
+services:
+  ssq-app:
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      - DASHSCOPE_API_KEY=${DASHSCOPE_API_KEY}
+    restart: always
+    volumes:
+      - .:/app 
